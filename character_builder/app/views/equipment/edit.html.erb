@@ -1,20 +1,25 @@
 <h1>Edit Equipment</h1>
 
-<%= form_with scope: :equipment, url: equipments_path, local: true do |form| %>
+<%= form_for @equipment, :url => {:controller => "equipment", :action => "update"} do |form| %>
 
   <p>
     <%= form.label :name %><br>
-    <%= form.text_area :name %>
+    <%= form.text_field :name %>
   </p>
 
   <p>
     <%= form.label :description %><br>
-    <%= form.text_field :description %>
+    <%= form.text_area :description %>
   </p>
 
   <p>
     <%= form.label :durability  %><br>
     <%= form.text_field :durability %>
+  </p>
+
+  <p>
+    <%= form.label :type  %><br>
+    <%= form.text_field :type %>
   </p>
 
   <p>

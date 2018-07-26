@@ -1,15 +1,15 @@
 <h1>Add new Equipment</h1>
 
-<%= form_with scope: :equipment, url: equipments_path, local: true do |form| %>
+<%= form_for @equipment, :url => {:controller => "equipment", :action => "create"} do |form| %>
 
   <p>
     <%= form.label :name %><br>
-    <%= form.text_area :name %>
+    <%= form.text_field :name %>
   </p>
 
   <p>
     <%= form.label :description %><br>
-    <%= form.text_field :description %>
+    <%= form.text_area :description %>
   </p>
 
   <p>
@@ -18,9 +18,16 @@
   </p>
 
   <p>
-    <%= form.label :character_id  %><br>
-    <%= form.text_field :character_id %>
+    <%= form.label :type  %><br>
+    <%= form.text_field :type %>
   </p>
+
+  <p>
+    <%= form.label :character_id  %><br>
+    <%= form.number_field :character_id %>
+  </p>
+
+
 
   <p>
     <%= form.submit %>

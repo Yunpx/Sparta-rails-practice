@@ -9,6 +9,15 @@
   <%= @character.class_type %>
 </p>
 <p>
-  <strong>user:</strong>
-  <%= @character.user_id %>
+  <strong>level:</strong>
+  <%= @character.level %>
 </p>
+<p>
+  <strong>gender:</strong>
+  <%= @character.gender %>
+</p>
+<%= link_to 'Back', characters_path %>
+<%= link_to 'Edit', edit_character_path(@character) %>
+
+<%= link_to 'Equipments', characters_path %>
+<!-- change link to Equipments page -->

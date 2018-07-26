@@ -1,12 +1,12 @@
 
 <h1>Listing characters</h1>
-<!-- <%= @characters.name%> -->
 
 
 <table>
   <tr>
-    <th>Title</th>
-    <th>Text</th>
+    <th>Name</th>
+    <th>class</th>
+    <th>User id</th>
     <th></th>
   </tr>
 
@@ -14,6 +14,7 @@
     <tr>
       <td><%= character.name %></td>
       <td><%= character.class_type %></td>
+      <td><%= character.user_id %></td>
       <td><%= link_to 'Show', character_path(character) %></td>
     </tr>
   <% end %>

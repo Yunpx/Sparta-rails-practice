@@ -4,7 +4,7 @@ class CharactersController < ApplicationController
   end
 
   def create
-    @character = Character.new(params[:character])
+    @character = Character.new(character_params)
 
     @character.save
     redirect_to @character

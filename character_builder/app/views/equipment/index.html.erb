@@ -1,11 +1,28 @@
-<h1>Equipment List</h1>
+<h1><%= character.name%>'s equipment</h1>
+<table>
+  <tr>
+    <th>Weapon</th>
+    <th>Weapon Description</th>
+    <th>Durability</th>
+    <th>Equipment Type</th>
 
-<% @equipment.each do |item| %>
+    <th></th>
+  </tr>
 
-  <p>Weapon: <%= item.name %></p>
-  <p>Weapon Description: <%= item.description %> </p>
-  <p>Durability: <%= item.durability %> </p>
-  <p>Equipment Type: <%= item.type %></p>
-  <p>Character ID: <%= item.character_id %></p>
-  <p>-------------------------------------------------------</p>
-<% end %>
+  <% @equips.each do |equip| %>
+  <% if equips.character_id == @character %>
+    <tr>
+      <td><%= equip.name %></td>
+      <td><%= equip.description %></td>
+      <td><%= equip.durability %></td>
+      <td><%= equip.type %></td>
+
+      <td><%= link_to 'Show', equips_path(equip) %></td>
+      <td><%= link_to 'Edit', edit_equips_path(equip) %></td>
+      <td><%= link_to 'Destroy', equips_path(equip),
+                    method: :delete,
+                    data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+  <% end %>
+</table>

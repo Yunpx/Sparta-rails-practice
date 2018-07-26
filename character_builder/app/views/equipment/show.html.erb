@@ -1,23 +1,27 @@
 <p>
   <strong>Name:</strong>
-  <%= @equipment.name %>
+  <%= @equips.name %>
 </p>
 
 <p>
   <strong>Description:</strong>
-  <%= @equipment.description %>
+  <%= @equips.description %>
 </p>
 <p>
   <strong>Durability:</strong>
-  <%= @equipment.durability %>
+  <%= @equips.durability %>
 </p>
 
 <p>
   <strong>Equipment Type:</strong>
-  <%= @equipment.type %>
+  <%= @equips.type %>
 </p>
 
 <p>
   <strong>Character ID:</strong>
-  <%= @equipment.character_id %>
+  <%= @equips.character_id %>
 </p>
+<%= link_to 'Back', equips_path %>
+<%= link_to 'Edit', edit_equips_path(@equips) %>
+
+<%= link_to 'Equipments', equips_path %>

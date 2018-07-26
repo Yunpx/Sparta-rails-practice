@@ -5,10 +5,10 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   resources :characters do
-    resources :equipment
+    resources :equips
   end
 
-  resources :equipment
+  resources :equips
 
   # get 'character/:id'
 

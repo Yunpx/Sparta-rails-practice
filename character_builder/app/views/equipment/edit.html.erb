@@ -1,6 +1,6 @@
 <h1>Edit Equipment</h1>
 
-<%= form_for @equipment, :url => {:controller => "equipment", :action => "update"} do |form| %>
+<%= form_for @equips, :url => {:controller => "equips", :action => "update"} do |form| %>
 
   <p>
     <%= form.label :name %><br>
@@ -30,4 +30,6 @@
   <p>
     <%= form.submit %>
   </p>
+
+  <%= link_to 'Back', equips_path %>
 <% end %>

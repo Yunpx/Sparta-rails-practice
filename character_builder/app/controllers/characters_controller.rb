@@ -1,4 +1,7 @@
 class CharactersController < ApplicationController
+  def show
+    @character = Character.find(params[:id])
+  end
   def new
 
   end
@@ -8,11 +11,10 @@ class CharactersController < ApplicationController
 
     @character.save
     redirect_to @character
-
   end
 
   private
-  def character_params
-    params.require(:character).permit(:name, :class_type)
-  end
+    def character_params
+      params.require(:character).permit(:name, :class_type, :user_id)
+    end
 end

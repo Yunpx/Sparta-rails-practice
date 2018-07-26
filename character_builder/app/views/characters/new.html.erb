@@ -1,15 +1,15 @@
 <h1>Add new charaters</h1>
 
 
-<%= form_with scope: :charater, url: charaters_path, local: true do |form| %>
+<%= form_with scope: :character, url: characters_path, local: true do |form| %>
   <p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
+    <%= form.label :class_type %><br>
+    <%= form.text_field :class_type %>
   </p>
 
   <p>
-    <%= form.label :text %><br>
-    <%= form.text_area :text %>
+    <%= form.label :name %><br>
+    <%= form.text_area :name %>
   </p>
 
   <p>

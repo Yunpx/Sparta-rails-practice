@@ -1,0 +1,28 @@
+<h1>Edit Equipment</h1>
+
+<%= form_with scope: :equipment, url: equipments_path, local: true do |form| %>
+
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_area :name %>
+  </p>
+
+  <p>
+    <%= form.label :description %><br>
+    <%= form.text_field :description %>
+  </p>
+
+  <p>
+    <%= form.label :durability  %><br>
+    <%= form.text_field :durability %>
+  </p>
+
+  <p>
+    <%= form.label :character_id  %><br>
+    <%= form.text_field :character_id %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

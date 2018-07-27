@@ -48,7 +48,7 @@ class EquipsController < ApplicationController
   end
 
     def equip_params
-      params.require(:equip).permit(:name, :description, :durability, :character_id)
+      params.require(:equip).permit(:name, :description, :durability, :type ,:character_id)
     end
 
 end
